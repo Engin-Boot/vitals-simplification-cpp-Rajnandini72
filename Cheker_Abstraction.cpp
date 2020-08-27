@@ -6,12 +6,6 @@ bool vitalsIsInLimit(float value, int lowerLimit, int upperLimit)
     return(value >= lowerLimit && value <= upperLimit);
 }
 
-//bool vitalsIsOutOfLimit(float value, int lowerLimit, int upperLimit)
-//{
-//    return(value < lowerLimit && value > upperLimit);
-//}
-
-
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
     return(vitalsIsInLimit(bpm,70,150)&& vitalsIsInLimit(spo2,90,100)&& vitalsIsInLimit(respRate, 30,95));
 }
