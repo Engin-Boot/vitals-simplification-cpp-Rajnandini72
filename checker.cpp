@@ -32,8 +32,8 @@ bool respIsOk(int respRate) {
     return(respRate > 30 && respRate < 95);
 }
 
-bool vitalsAreOk(vitals pat1)
+bool vitalsAreOk(vitals pat)
 {
-    return(cardiacIsOk(pat1.bpm, pat1.spo2) && respIsOk(pat1.respRate));
+    return(cardiacIsOk(pat.bpm, pat.spo2) && respIsOk(pat.respRate));
 }
 
