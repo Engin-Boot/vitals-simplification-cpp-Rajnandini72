@@ -33,19 +33,6 @@ public:
     }
 };
 
-class AlertIntegrator : public AlertInterface
-{
-private:
-    AlertWithSMS smsAlerter;
-    AlertWithSound soundAlerter;
-public:
-    void raiseAlert(const char* vitalName, const char* level) override
-    {
-        smsAlerter.raiseAlert(vitalName, level);
-        soundAlerter.raiseAlert(vitalName, level);
-    }
-};
-
 class RangeChecker
 {
 private:
